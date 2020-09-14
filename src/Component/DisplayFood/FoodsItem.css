@@ -1,0 +1,19 @@
+.box:hover{
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgb(148, 148, 148);
+    cursor: pointer;
+}
+.foodImage{
+    width:150px;
+    height: 150px;
+}
+.price{
+    display:inline-block;
+    margin:  0;
+}
+:active,
+:visited,
+:link{
+    text-decoration: none;
+    color:black
+}
