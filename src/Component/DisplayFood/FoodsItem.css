@@ -3,6 +3,10 @@
     box-shadow: 0 3px 10px rgb(148, 148, 148);
     cursor: pointer;
 }
+.box{
+    margin:20px;
+    padding:10px;
+}
 .foodImage{
     width:150px;
     height: 150px;

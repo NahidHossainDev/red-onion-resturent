@@ -16,9 +16,6 @@ const FoodsItem = (props) => {
 
           <Box
             className="box"
-            p={1}
-            m={4}
-            onClick={() => props.handle(props.food)}
           >
             <img src={img} className="foodImage" alt="" />
             <h5>{title}</h5>

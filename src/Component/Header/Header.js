@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from '@material-ui/core/Container';
 import { AppBar, useScrollTrigger, Slide, CssBaseline, Toolbar, Button } from '@material-ui/core';
 import logo from '../images/logo2.png'
 import { makeStyles } from "@material-ui/core/styles";
 import ShoppingBasketOutlinedIcon from "@material-ui/icons/ShoppingBasketOutlined";
 import { Link } from 'react-router-dom';
+import { ContextElement } from '../../App';
 
 
 const HideOnScroll = (props) => {
@@ -18,6 +19,9 @@ const HideOnScroll = (props) => {
 };
 
 export default function HideAppBar(props) {
+
+  const [foodItem] = useContext(ContextElement);
+
     const useStyles = makeStyles({
         logo: {
          maxWidth: 160,
@@ -29,12 +33,16 @@ export default function HideAppBar(props) {
         cartIcon: {
           color: 'black',
           marginLeft: 'auto',
-          marginRight:'30px',
+          marginRight:'5px',
         },
         button: {
           borderRadius:'60px',
           marginLeft:'20px',
       },
+      span: {
+        color: 'black',
+        marginRight:'40px'
+        },
     });
     const classes = useStyles();
     return (
@@ -44,12 +52,19 @@ export default function HideAppBar(props) {
           <AppBar className={classes.appBar}>
             <Container>
               <Toolbar>
-                <Link to='/home'><img className={classes.logo} src={logo} alt="logo" /></Link>
+                <Link to="/home">
+                  <img className={classes.logo} src={logo} alt="logo" />
+                </Link>
                 <ShoppingBasketOutlinedIcon
                   className={classes.cartIcon}
                 ></ShoppingBasketOutlinedIcon>
-                <Button>Log in</Button>
-                <Button className={classes.button} variant="contained" color="secondary">
+                <span className={classes.span}>: {foodItem.length}</span>
+                <Button color="secondary">Log in</Button>
+                <Button
+                  className={classes.button}
+                  variant="contained"
+                  color="secondary"
+                >
                   Sign up
                 </Button>
               </Toolbar>

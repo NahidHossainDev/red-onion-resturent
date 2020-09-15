@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Button, Container } from '@material-ui/core';
 import allFoods from '../fakeData';
 import FoodsItem from './FoodsItem';
+import { ContextElement } from '../../App';
+import { Link } from 'react-router-dom';
 
 
 const Foods = () => {
@@ -24,12 +26,8 @@ const Foods = () => {
         setFoods(selected);
     },[category]);
    
-  const[ selectedFood, setSelectedFood] =useState([])
-  const handleForSelectFood = (food) => {
-   
-    // const newItem = [...selectedFood, food];
-    // setSelectedFood(newItem)
-  }
+  const [selectedFood, setSelectedFood] = useContext(ContextElement);
+ 
 
   return (
     <div style={{ textAlign: "center", margin: "100px 0" }}>
@@ -54,12 +52,13 @@ const Foods = () => {
         </Button>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {foods.map((f) => (
-            <FoodsItem food={f} handle={handleForSelectFood}></FoodsItem>
+            <FoodsItem food={f}></FoodsItem>
           ))}
         </div>
-        <Button variant="contained" color="secondary" disabled = {selectedFood.length < 1}>
+        <Link to='/checkout'>
+         <Button variant="contained" color="secondary" disabled = {selectedFood.length < 1}>
           Checkout your food
-        </Button>
+        </Button></Link>
       </Container>
     </div>
   );
