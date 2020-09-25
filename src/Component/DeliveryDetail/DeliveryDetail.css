@@ -1,0 +1,16 @@
+.deliveryForm input{
+    display:block;
+    margin-top: 20px;
+    padding:10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 18px;
+}
+.error{
+    color:red
+}
+.submitBtn{
+    background-color: rgb(233, 21, 63);
+    color: white
+}

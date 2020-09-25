@@ -5,7 +5,7 @@ import Home from './Component/Home/Home';
 import { BrowserRouter as Router, Switch, Route, Link, useParams } from "react-router-dom";
 import FoodDetail from './Component/FoodDetail/FoodDetail';
 import NotFound from './Component/NotFound';
-import CheckOutDetail from './Component/CheckOutDetail/CheckOutDetail';
+import CheckOutDetail from './Component/DeliveryDetail/DeliveryDetail';
 
 export const ContextElement = createContext();
 

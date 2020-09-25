@@ -13,10 +13,7 @@ const FoodsItem = (props) => {
       <>
         <Grid item xs={12} sm={4}>
           <Link to={`/foodDetail/${id}`}>
-
-          <Box
-            className="box"
-          >
+          <Box className="box" >
             <img src={img} className="foodImage" alt="" />
             <h5>{title}</h5>
             <p>{p}</p>

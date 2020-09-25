@@ -3,7 +3,7 @@ import { Button, Container } from '@material-ui/core';
 import allFoods from '../fakeData';
 import FoodsItem from './FoodsItem';
 import { ContextElement } from '../../App';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 
 const Foods = () => {
@@ -13,7 +13,6 @@ const Foods = () => {
     const [foods, setFoods] = useState([]);
     const [category, setCategory] = useState('lunch');
   
-
     const generalF = (boolean1,boolean2,boolean3, category) => {
          setBreakfast(boolean1);
          setLunch(boolean2);
@@ -28,7 +27,10 @@ const Foods = () => {
    
   const [selectedFood, setSelectedFood] = useContext(ContextElement);
  
-
+  const history = useHistory();
+  const handleForCheckout = () => {
+  history.push('/checkout');
+  }
   return (
     <div style={{ textAlign: "center", margin: "100px 0" }}>
       <Container>
@@ -55,10 +57,9 @@ const Foods = () => {
             <FoodsItem food={f}></FoodsItem>
           ))}
         </div>
-        <Link to='/checkout'>
-         <Button variant="contained" color="secondary" disabled = {selectedFood.length < 1}>
+         <Button variant="contained" color="secondary" onClick={handleForCheckout}  disabled = {selectedFood.length < 1}>
           Checkout your food
-        </Button></Link>
+        </Button>
       </Container>
     </div>
   );
