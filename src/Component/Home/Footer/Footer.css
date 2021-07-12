@@ -1,0 +1,32 @@
+.footer{
+    background: #010a20;
+    padding: 70px 0;
+    margin-top: 50px;
+}
+.footer img{
+    width: 150px;
+}
+.footer ul{
+    margin: 0;
+    padding: 0;
+}
+.footer ul li{
+    list-style: none;
+}
+.footer ul li a{
+    color: white;
+    line-height: 30px;
+}
+.copyright,
+.privacy-terms{
+    display: flex;
+    justify-self: flex-end;
+    align-self: end;
+    margin-top: 50px;
+    color:white
+}
+.privacy-terms a{
+    display: block;
+    color:white;
+    margin:0 30px;
+}

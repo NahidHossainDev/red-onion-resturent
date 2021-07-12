@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Button, Container } from '@material-ui/core';
-import allFoods from '../fakeData';
+import allFoods from '../../fakeData';
 import FoodsItem from './FoodsItem';
-import { ContextElement } from '../../App';
+import { ContextElement } from '../../../App';
 import { Link, useHistory } from 'react-router-dom';
 
 
@@ -53,8 +53,8 @@ const Foods = () => {
           Dinner
         </Button>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {foods.map((f) => (
-            <FoodsItem food={f}></FoodsItem>
+          {foods.map((f,i) => (
+            <FoodsItem food={f} key ={i}></FoodsItem>
           ))}
         </div>
          <Button variant="contained" color="secondary" onClick={handleForCheckout}  disabled = {selectedFood.length < 1}>

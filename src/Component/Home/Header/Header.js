@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import Container from '@material-ui/core/Container';
 import { AppBar, useScrollTrigger, Slide, CssBaseline, Toolbar, Button } from '@material-ui/core';
-import logo from '../images/logo2.png'
+import logo from '../../images/logo2.png'
 import { makeStyles } from "@material-ui/core/styles";
 import ShoppingBasketOutlinedIcon from "@material-ui/icons/ShoppingBasketOutlined";
 import { Link } from 'react-router-dom';
-import { ContextElement } from '../../App';
+import { ContextElement } from '../../../App';
 
 
 const HideOnScroll = (props) => {

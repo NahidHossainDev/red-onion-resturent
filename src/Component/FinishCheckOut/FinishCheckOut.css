@@ -1,0 +1,54 @@
+.map{
+    text-align: center;
+}
+.map img{
+    max-width: 600px;
+    border-radius: 10px;
+}
+.detail{
+    background-color: #ecf0f1;
+    text-align: left;
+    border-radius: 10px;
+}
+.bike{
+    width:60px
+}
+.location{
+    background: white;
+    border-radius: 5px;
+}
+.location ul {
+  list-style: none;
+}
+.location p{
+    margin-top: 0px;
+    color: grey; 
+}
+.location ul li::before {
+  content: "\2022";
+  color: red;
+  font-size: 25px;
+  font-weight:900;
+  display: inline-block; 
+  width:1em;
+  margin-left: -1em;
+}
+#es-time{
+    margin-bottom: 0;
+}
+.rider{
+    background: white;
+    border-radius: 5px;
+    padding:10px;
+    margin-top: 30px;
+}
+.rider img{
+    width: 70px;
+}
+.rider h4{
+    margin: 0;
+}
+.rider-name{
+    margin-top: 10px;
+    margin-left: 20px;
+}

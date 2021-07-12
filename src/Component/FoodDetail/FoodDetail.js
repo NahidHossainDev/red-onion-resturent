@@ -10,8 +10,7 @@ import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
 
 const FoodDetail = () => {
     const { id } = useParams()
-  const food = allFoods.find(f => f.id == id)
-  console.log(food)
+    const food = allFoods.find(f => f.id == id)
     const [foodCart, setFoodCart] = useContext(ContextElement);
     
     const [count, setCount] = useState(1)
